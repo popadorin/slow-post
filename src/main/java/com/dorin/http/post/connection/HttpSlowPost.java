@@ -1,5 +1,6 @@
-package com.dorin;
+package com.dorin.http.post.connection;
 
+import com.dorin.http.post.connection.HttpResponseParser;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -12,7 +13,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SlowPost {
+public class HttpSlowPost {
     private static final HttpClient httpclient = HttpClients.createDefault();
     private static final HttpPost httppost = new HttpPost("http://192.168.1.3:3000/users");
 

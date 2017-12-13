@@ -1,4 +1,4 @@
-package com.dorin;
+package com.dorin.http.post.connection;
 
 import org.apache.http.HttpResponse;
 

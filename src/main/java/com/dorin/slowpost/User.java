@@ -1,4 +1,4 @@
-package com.dorin;
+package com.dorin.slowpost;
 
 public class User {
     private String name;
